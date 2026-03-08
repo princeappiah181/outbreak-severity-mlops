@@ -1,0 +1,17 @@
+{
+  "model_name": "WHO DON Hybrid Severity Classifier",
+  "model_type": "LogisticRegression",
+  "text_features": "TF-IDF unigram+bigram",
+  "structured_features": [
+    "log_deaths",
+    "log_cases",
+    "phrase_flag"
+  ],
+  "threshold": 0.35,
+  "high_risk_phrases": [
+    "international spread",
+    "public health emergency",
+    "rapid increase",
+    "serious public health risk"
+  ]
+}
