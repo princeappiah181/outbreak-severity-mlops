@@ -145,6 +145,26 @@ adding geographic outbreak modeling<br>
 training transformer-based NLP models<br>
 building a real-time dashboard for outbreak monitoring<br>
 
+## Run Locally
+
+Clone the repository
+
+git clone https://github.com/princeappiah181/outbreak-severity-mlops.git
+
+cd outbreak-severity-mlops
+
+Install dependencies
+
+pip install -r requirements.txt
+
+Start the API
+
+uvicorn app:app --reload
+
+Open the API docs
+
+http://127.0.0.1:8000/docs
+
 ## Author
 Prince Appiah, Ph.D <br>
 Data Science
