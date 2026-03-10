@@ -5,26 +5,26 @@ This project builds an end-to-end machine learning system that analyzes disease 
 severity or low severity.<br>
 The goal is to demonstrate how machine learning can support early warning systems for public health by automatically analyzing outbreak
 reports and identifying events that may require urgent attention.The system processes outbreak text, extracts epidemiological indicators such 
-as reported cases and deaths, and combines them with natural language features to generate a severity prediction.
+as reported cases and deaths, and combines them with natural language features to generate a severity prediction.<br>
 This repository also demonstrates the full machine learning lifecycle, including data processing, model training, explainability, and 
 deployment as a production API.
 
 ## Motivation
 Disease outbreak reports contain valuable information for public health monitoring, but manual analysis does not scale when reports are 
 collected from multiple sources.
-This project explores how machine learning can assist with:\
-identifying severe outbreaks quickly
-prioritizing public health response
-supporting decision-makers with interpretable predictions
+This project explores how machine learning can assist with:<br>
+identifying severe outbreaks quickly<br>
+prioritizing public health response<br>
+supporting decision-makers with interpretable predictions<br>
 The system is intended as a decision support tool, not a replacement for epidemiological expertise.
 
 ## Dataset
 The dataset consists of World Health Organization Disease Outbreak News (DON) reports.
-The reports were collected through web scraping and contain information about:
-outbreak description
-case counts
-death counts
-geographic regions
+The reports were collected through web scraping and contain information about:<br>
+outbreak description<br>
+case counts<br>
+death counts<br>
+geographic regions<br>
 public health response
 
 Each report is labeled as high severity or low severity based on epidemiological indicators such as reported deaths, case counts, and 
@@ -35,109 +35,108 @@ The model combines textual information and structured epidemiological signals.
 
 ### Text Features
 Natural language processing is applied using TF-IDF vectorization to capture important words and phrases related to disease outbreaks.
-Examples include:
-outbreak
-deaths
-confirmed cases
-Ebola
-yellow fever
+Examples include:<br>
+outbreak<br>
+deaths<br>
+confirmed cases<br>
+Ebola<br>
+yellow fever<br>
 
 ### Structured Features
-Additional features are extracted from the report text:
-number of reported deaths
-number of reported cases
-presence of high-risk emergency phrases
+Additional features are extracted from the report text:<br>
+number of reported deaths<br>
+number of reported cases<br>
+presence of high-risk emergency phrases<br>
 Log transformations are applied to numeric variables to reduce skew.
 
 ## Model
-The final model is a hybrid classification system combining:
-TF-IDF text features
-structured outbreak indicators
+The final model is a hybrid classification system combining:<br>
+TF-IDF text features<br>
+structured outbreak indicators<br>
 A logistic regression classifier is trained on the combined feature space.
 
 Performance
-Final hybrid model results:
-Accuracy: ~95%
-ROC-AUC: ~0.99
-False negatives: very low after threshold tuning
+Final hybrid model results:<br>
+Accuracy: ~95%<br>
+ROC-AUC: ~0.99<br>
+False negatives: very low after threshold tuning<br>
 The model prioritizes recall for severe outbreaks, which is important in early warning systems.
 
 Model Explainability
-To ensure interpretability, the project includes SHAP analysis to understand feature contributions.
-The most influential features include:
-reported deaths
-emergency risk phrases
-reported case counts
+To ensure interpretability, the project includes SHAP analysis to understand feature contributions.<br>
+The most influential features include:<br>
+reported deaths<br>
+emergency risk phrases<br>
+reported case counts<br>
 This allows users to see why the model flagged an outbreak as severe.
 
 ## Deployment
-The trained model is deployed as a FastAPI web service.
-The API:
-receives outbreak text
-extracts structured features
-applies TF-IDF vectorization
-generates a severity prediction
-returns the result as JSON
-Example API response:
-{
-  "severity_prediction": 1,
-  "probability_severe": 0.96
-}
-The service is deployed on Render.
-API Endpoints
-Health Check
-GET /health
-Confirms that the service is running.
+The trained model is deployed as a FastAPI web service.<br>
+The API:<br>
+receives outbreak text<br>
+extracts structured features<br>
+applies TF-IDF vectorization<br>
+generates a severity prediction<br>
+returns the result as JSON<br>
+Example API response:<br>
+{<br>
+  "severity_prediction": 1,<br>
+  "probability_severe": 0.96<br>
+}<br>
+The service is deployed on Render.<br>
+API Endpoints<br>
+Health Check<br>
+GET /health<br>
+Confirms that the service is running.<br>
 
-Prediction Endpoint
-POST /predict
-Example request:
-{
-  "report": "Ebola outbreak reported with 350 deaths and rapid spread across multiple regions."
-}
+Prediction Endpoint<br>
+POST /predict<br>
+Example request:<br>
+{<br>
+  "report": "Ebola outbreak reported with 350 deaths and rapid spread across multiple regions."<br>
+}<br>
 
 ## Project Structure
-outbreak-severity-mlops
-│
-├── app.py
-├── feature_pipeline.py
-├── requirements.txt
-├── severity_model.pkl
-├── tfidf_vectorizer.pkl
-├── notebooks
-│   └── modeling_and_analysis.ipynb
+outbreak-severity-mlops<br>
+│<br>
+├── app.py<br>
+├── feature_pipeline.py<br>
+├── requirements.txt<br>
+├── severity_model.pkl<br>
+├── tfidf_vectorizer.pkl<br>
+├── notebooks<br>
+│   └── modeling_and_analysis.ipynb<br>
 └── README.md
 
 ## Technologies Used
-Python
-Scikit-learn
-FastAPI
-Pandas
-NumPy
-SHAP
-Uvicorn
-Render (deployment)
+Python<br>
+Scikit-learn<br>
+FastAPI<br>
+Pandas<br>
+NumPy<br>
+SHAP<br>
+Uvicorn<br>
+Render (deployment)<br>
 
-Example Use Cases
-Potential applications include:
-automated monitoring of outbreak reports
-prioritizing global health alerts
-assisting epidemiological surveillance systems
+Example Use Cases<br>
+Potential applications include:<br>
+automated monitoring of outbreak reports<br>
+prioritizing global health alerts<br>
+assisting epidemiological surveillance systems<br>
 
-Ethical Considerations
-This system should be used only as a support tool for analysts and public health professionals.
+Ethical Considerations<br>
+This system should be used only as a support tool for analysts and public health professionals.<br>
 Machine learning predictions should always be interpreted alongside expert judgment.
 
-Future Improvements
-Possible extensions include:
-incorporating additional data sources
-adding geographic outbreak modeling
-training transformer-based NLP models
-building a real-time dashboard for outbreak monitoring
+Future Improvements<br>
+Possible extensions include:<br>
+incorporating additional data sources<br>
+adding geographic outbreak modeling<br>
+training transformer-based NLP models<br>
+building a real-time dashboard for outbreak monitoring<br>
 
 ## Author
-Prince Appiah, Ph.D 
-
+Prince Appiah, Ph.D <br>
 Data Science
 
 This project was developed as part of a practical exploration of machine learning in production and public health analytics.
