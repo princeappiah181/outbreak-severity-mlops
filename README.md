@@ -12,7 +12,7 @@ deployment as a production API.
 ## Motivation
 Disease outbreak reports contain valuable information for public health monitoring, but manual analysis does not scale when reports are 
 collected from multiple sources.
-This project explores how machine learning can assist with:
+This project explores how machine learning can assist with:\
 identifying severe outbreaks quickly
 prioritizing public health response
 supporting decision-makers with interpretable predictions
