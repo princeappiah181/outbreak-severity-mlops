@@ -136,7 +136,7 @@ training transformer-based NLP models
 building a real-time dashboard for outbreak monitoring
 
 ## Author
-Prince Appiah, Ph.D
+Prince Appiah, Ph.D \\n
 Data Science
 
 This project was developed as part of a practical exploration of machine learning in production and public health analytics.
