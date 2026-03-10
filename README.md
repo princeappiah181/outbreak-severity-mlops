@@ -114,6 +114,8 @@ outbreak-severity-mlops<br>
 ├── requirements.txt<br>
 ├── severity_model.pkl<br>
 ├── tfidf_vectorizer.pkl<br>
+├── images<br>
+│   └── api_demo_jpg<br>
 ├── notebooks<br>
 │   └── modeling_and_analysis.ipynb<br>
 └── README.md
