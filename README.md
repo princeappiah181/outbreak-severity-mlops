@@ -2,7 +2,7 @@
 
 ## API Demo
 
-![API Demo](images/api_demo.jgp)
+![API Demo](images/api_demo.jpg)
 
 ## Overview
 This project builds an end-to-end machine learning system that analyzes disease outbreak reports and predicts whether an outbreak is high 
