@@ -2,7 +2,7 @@
 
 ## Overview
 This project builds an end-to-end machine learning system that analyzes disease outbreak reports and predicts whether an outbreak is high 
-severity or low severity.
+severity or low severity.<br>
 The goal is to demonstrate how machine learning can support early warning systems for public health by automatically analyzing outbreak
 reports and identifying events that may require urgent attention.The system processes outbreak text, extracts epidemiological indicators such 
 as reported cases and deaths, and combines them with natural language features to generate a severity prediction.
