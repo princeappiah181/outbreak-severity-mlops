@@ -112,12 +112,13 @@ outbreak-severity-mlops<br>
 ├── app.py<br>
 ├── feature_pipeline.py<br>
 ├── requirements.txt<br>
+├── .python-version<br>
 ├── severity_model.pkl<br>
 ├── tfidf_vectorizer.pkl<br>
-├── images<br>
-│   └── api_demo_jpg<br>
-├── notebooks<br>
-│   └── modeling_and_analysis.ipynb<br>
+├── images/<br>
+│   └── api_demo.jpg<br>
+├── notebooks/<br>
+│   └── scoping_data_modeling_deployment_updated.ipynb<br>
 └── README.md
 
 ## Technologies Used
