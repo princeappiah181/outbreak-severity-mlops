@@ -1,10 +1,2 @@
-fastapi
-uvicorn
-pandas
-numpy<2
-scikit-learn
-scipy<1.14
-joblib
-pydantic
 streamlit
 requests
