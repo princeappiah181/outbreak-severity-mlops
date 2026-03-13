@@ -136,23 +136,23 @@ Example request:<br>
 }<br>
 
 ## Project Structure
-outbreak-severity-mlops
-│
-├── app.py
-├── streamlit_app.py
-├── feature_pipeline.py
-├── requirements.txt
-├── severity_model.pkl
-├── tfidf_vectorizer.pkl
-│
-├── images/
-│   └── api_demo.jpg
-│   └── ui_demo.jpg
-│
-├── notebooks/
-│   └── scoping_data_modeling_deployment_updated.ipynb
-│
-└── README.md
+outbreak-severity-mlops<br>
+│<br>
+├── app.py<br>
+├── streamlit_app.py<br>
+├── feature_pipeline.py<br>
+├── requirements.txt<br>
+├── severity_model.pkl<br>
+├── tfidf_vectorizer.pkl<br>
+│<br>
+├── images/<br>
+│   └── api_demo.jpg<br>
+│   └── ui_demo.jpg<br>
+│<br>
+├── notebooks/<br>
+│   └── scoping_data_modeling_deployment_updated.ipynb<br>
+│<br>
+└── README.md<br>
 
 
 ## Technologies Used
