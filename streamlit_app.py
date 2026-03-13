@@ -1,9 +1,7 @@
 import streamlit as st
 import requests
 
-# Replace this with your actual Render FastAPI endpoint
 API_URL = "https://outbreak-severity-api.onrender.com/predict"
-
 
 st.set_page_config(
     page_title="Outbreak Severity Predictor",
@@ -12,6 +10,20 @@ st.set_page_config(
 )
 
 st.title("🦠 Outbreak Severity Predictor")
+
+# ---- ADD API STATUS CHECK HERE ----
+health_url = "https://outbreak-severity-api.onrender.com/health"
+
+try:
+    r = requests.get(health_url, timeout=5)
+    if r.status_code == 200:
+        st.success("API Status: Online")
+    else:
+        st.warning("API Status: Waking up...")
+except:
+    st.warning("API Status: Connecting...")
+# ----------------------------------
+
 st.markdown(
     "Enter an outbreak report below to predict whether the outbreak is **severe** or **not severe**."
 )
@@ -21,6 +33,9 @@ report_text = st.text_area(
     height=180,
     placeholder="Example: Ebola outbreak reported with 350 deaths and rapid spread across multiple regions."
 )
+
+
+
 
 if st.button("Predict Severity", use_container_width=True):
     if not report_text.strip():
