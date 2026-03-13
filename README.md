@@ -1,5 +1,9 @@
 # Public Health Outbreak Severity Prediction (MLOps Project)
 
+## UI Demo
+![UI Demo](images/ui_demo1.jpg)
+![UI Demo](images/ui_demo2.jpg)
+
 ## Live UI
 The deployed UI is available here:
 https://outbreak-severity-mlops-8g9tnu3artsgreihxidvub.streamlit.app/
